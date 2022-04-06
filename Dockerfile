@@ -9,4 +9,4 @@ RUN mkdir -p /var/www/html && \
   rm -rf /var/www/html/* && \
   echo '<a href="/webgrind">GO TO WEBGRIND</a>' > /var/www/html/index.html && \
   mv webgrind /var/www/html/ && \
-  apt-get -y remove git
+  apk del git
