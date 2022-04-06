@@ -4,8 +4,7 @@ FROM php:fpm-alpine
 # https://github.com/jokkedk/webgrind/issues/130
 RUN mkdir -p /var/www/html && \
   cd /tmp && \
-  apt-get update && \
-  apt-get -y --no-install-recommends install git graphviz python3 && \
+  apk add --no-cache git graphviz python3 && \
   git clone https://github.com/jokkedk/webgrind.git && \
   rm -rf /var/www/html/* && \
   echo '<a href="/webgrind">GO TO WEBGRIND</a>' > /var/www/html/index.html && \
